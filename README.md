@@ -1,5 +1,5 @@
 
-# Electron Todo
+# Electron Be Rational
 
 A trade risk management app made with Electron.
 
