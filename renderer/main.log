@@ -1,0 +1,25 @@
+[2022-04-23 13:23:10.040] [info]  { setup: 'LOL',
+  exchange: 'bitfinex',
+  symbol: '1INCH/USD',
+  type: 'limit',
+  side: 'buy',
+  stop: '0.5' }
+[2022-04-23 13:23:28.820] [info]  { setup: 'LOL',
+  exchange: 'bitfinex',
+  symbol: '1INCH/USD',
+  type: 'limit',
+  side: 'buy',
+  stop: '0.5' }
+[2022-04-23 13:24:43.398] [info]  { setup: 'LOL',
+  exchange: 'bitfinex',
+  symbol: '1INCH/USD',
+  type: 'limit',
+  side: 'buy',
+  stop: '0.5' }
+[2022-04-23 13:24:57.360] [info]  { setup: 'LOL',
+  exchange: 'bitfinex',
+  symbol: '1INCH/USD',
+  type: 'limit',
+  side: 'buy',
+  stop: '0.5' }
+[2022-04-23 22:06:41.336] [info]  undefined

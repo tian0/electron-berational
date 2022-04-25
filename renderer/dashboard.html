@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+   <meta name="keywords"
+      content="crypto, bitcoins, ethereum, dogecoin, iota, ripple, siacoin, exchange, trading platform, crypto trading">
+   <meta name="author" content="">
+   <title>Be Rational - Automated Trade Execution</title>
+
+   <link rel="stylesheet" href="app/css/bootstrap.css">
+   <link rel="stylesheet" href="plugins/fontawesome/css/font-awesome.css">
+   <link rel="stylesheet" href="plugins/animo/animate%2banimo.css">
+   <link rel="stylesheet" href="plugins/csspinner/csspinner.min.css">
+   <link rel="stylesheet" href="app/css/app.css">
+   <script src="plugins/modernizr/modernizr.js"></script>
+   <script src="plugins/fastclick/fastclick.js"></script>
+</head>
+
+<body>
+
+   <section class="wrapper">
+      <nav class="navbar navbar-default navbar-top navbar-fixed-top">
+         <div class="navbar-header">
+            <a href="#" class="navbar-brand">
+               <div class="brand-logo"><i class="fa fa-bitcoin"></i>e Rational</div>
+               <div class="brand-logo-collapsed"><i class="fa fa-bitcoin"></i></div>
+            </a>
+         </div>
+         <div class="nav-wrapper">
+            <ul class="nav navbar-nav mt0">
+               <li>
+                  <a href="#" data-toggle="aside">
+                     <em class="fa fa-align-left"></em>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <aside class="aside">
+         <nav class="sidebar">
+            <ul class="nav">
+               <li class="active">
+                  <a href="#">
+                     <em class="fa fa-home"></em>
+                     <span class="item-text">Dashboard</span>
+                  </a>
+               </li>
+               <li class="">
+                  <a href="#" title="" data-toggle="collapse-next" class="has-submenu">
+                     <em class="fa fa-cogs"></em>
+                     <span class="item-text">API Settings</span>
+                  </a>
+                  <ul class="nav collapse">
+                     <li>
+                        <a id='inputKeys' href='#' title="" data-toggle="" class="no-submenu">
+                           <span class="item-text">API Keys</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+
+               <li class="">
+                  <a href="logout.html" title="" class="">
+                     <em class="fa fa-sign-out"></em>
+                     <span class="item-text">Logout</span>
+                  </a>
+               </li>
+               <br><br>
+               <li class="">
+                  <a href="bracket.html" class="btn-main btn-grass btn center-block">
+                     Bracket</a>
+                  <a href="splitter.html" class="btn-main btn-grass btn center-block">
+                     Splitter</a>
+                  <a href="LOL.html" class="btn-main btn-grass btn center-block">
+                     LOL</a>
+                  <a href="bot.html" class="btn-main btn-grass btn center-block">
+                     BoT</a>
+               </li>
+            </ul>
+         </nav>
+      </aside>
+      <section>
+         <section class="main-content">
+            <h3>Dashboard
+            </h3>
+            <div class="row">
+               <!-- Open -->
+               <div class="col-md-12">
+                  <div class="panel panel-info">
+                     <div class="panel-heading">Open Trades
+                        <a href="#" data-perform="panel-collapse" data-toggle="tooltip" title="Collapse Panel"
+                           class="pull-right">
+                           <em class="fa fa-minus"></em>
+                        </a>
+                     </div>
+                     <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                           <thead>
+                              <tr>
+                                 <th>Date</th>
+                                 <th>Setup</th>
+                                 <th>Exchange</th>
+                                 <th>Asset</th>
+                                 <th>Type</th>
+                                 <th>Side</th>
+                                 <th>Stop</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    08/18/2020 06:02:45
+                                 </td>
+                                 <td class="text-green">Splitter<i class="fa fa-arrow-up"></i></td>
+                                 <td>Binance</td>
+                                 <td>LRCBTC</td>
+                                 <td>Limit</td>
+                                 <td>Buy</td>
+                                 <td>0.00022000</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    08/18/2020 10:00:00
+                                 </td>
+                                 <td class="text-green">LOL<i class="fa fa-arrow-up"></i></td>
+                                 <td>Binance</td>
+                                 <td>SCBTC</td>
+                                 <td>Limit</td>
+                                 <td>Buy</td>
+                                 <td>0.00000030</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    08/13/2020 11:18:02
+                                 </td>
+                                 <td class="text-green">BoT <i class="fa fa-arrow-up"></i></td>
+                                 <td>FTX</td>
+                                 <td>COMP-PERP</td>
+                                 <td>Limit</td>
+                                 <td>Buy</td>
+                                 <td>201.20</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    08/09/2020 21:15:22
+                                 </td>
+                                 <td class="text-danger">Bracket<i class="fa fa-arrow-down"></i></td>
+                                 <td>FTX</td>
+                                 <td>XRP-PERP</td>
+                                 <td>Limit</td>
+                                 <td>Sell</td>
+                                 <td>0.22000</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div class="panel-footer">
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class="float-right">
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li class="disabled"><a href="javascript:void(0);">First</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li class="disabled"><a href="javascript:void(0);">Prev</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li class="active"><a href="javascript:void(0);">1</a></li>
+                                    <li><a href="javascript:void(0);">2</a></li>
+                                    <li><a href="javascript:void(0);">3</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li><a href="javascript:void(0);">Next</a></li>
+                                 </ul>
+                                 <ul class="pagination pagination-sm pagi-margin">
+                                    <li><a href="javascript:void(0);">Last</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </section>
+         <!-- FOOTER -->
+         <footer class="footer bg-dark-2">
+            <div class="container">
+               <div class="row">
+
+                  <div class="col-md-4 col-sm-8">
+                     <h4 class="logo"><i class="fa fa-bitcoin"></i>e Rational</h4>
+                     <p>Manage risk with automatic trade execution</p>
+
+                     <ul class="list-inline social">
+                        <li>
+                           <a href="www.twitter.com/berational" class="bg-twitter"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                           <a href="www.github.com/berational" class="bg-github"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li>
+                           <a href="www.linkedin.com/in/berational" class="bg-linkedin"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="col-md-3 col-sm-6">
+                     <h5>Quick Links</h5>
+                     <ul class="list-unstyled footer-list">
+                        <li><a href="#">Fee Info</a></li>
+                        <li><a href="#">Upgrade Plan</a></li>
+                        <li><a href="#">Help &amp; Support</a></li>
+                     </ul>
+                  </div>
+
+                  <div class="col-md-3 col-sm-6">
+                     <h5>Useful Links</h5>
+                     <ul class="list-unstyled footer-list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                     </ul>
+                  </div>
+
+               </div> <!-- end row -->
+
+            </div> <!-- end container -->
+         </footer>
+         <!-- end FOOTER -->
+      </section>
+
+      <!-- Modals -->
+      <div id="splitterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+         class="modal fade" style="display: none">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                  <h4 id="myModalLabel" class="modal-title">Splitter</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="row">
+                     <div class="container">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                           <div class="form-group">
+                              <div class="dropdown-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text" style="font-size: 14px;" id="upper">Exchange</span>
+                                 </div>
+                                 <select id="exch" data-live-search="true" onchange="getAssets()"
+                                    class="btn-lg dropdown-toggle" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <option value="">-- Select Exchange --</option>
+                                 </select>
+                                 <p id="msg_exch"></p>
+                              </div>
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text" style="font-size: 14px;" id="upper">Asset</span>
+                                 </div>
+                                 <div class="row display-flex justify-content-between">
+                                    <div id="myDropdown" class="justify-left col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                       <select id="asset" onchange="show(this)" class="btn-md dropdown-toggle"
+                                          type="button" data-toggle="dropdown" aria-haspopup="true"
+                                          aria-expanded="false">
+                                          <option value="">-- Select Asset --</option>
+                                       </select>
+                                    </div>
+                                    <div id="myFilter" class="justify-right col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                       <input type="text" class="form-control" placeholder="Filter Assets.."
+                                          id="myInput" onkeyup="filterFunction()">
+                                       <p id="msg_asset"></p>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text" style="font-size: 14px;" id="upper">High Price</span>
+                                 </div>
+                                 <input type="number" onkeyup="calc(this)" class="form-control" placeholder=""
+                                    id="upper-input">
+                              </div>
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text" style="font-size: 14px;" id="lower">Low Price</span>
+                                 </div>
+                                 <input type="number" onkeyup="calc(this)" class="form-control" placeholder=""
+                                    id="lower-input">
+                              </div>
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text" style="font-size: 14px;" id="split">Split into how
+                                       many
+                                       orders?</span>
+                                 </div>
+                                 <input type="number" onkeyup="calc(this)" class="form-control"
+                                    placeholder="n Number of orders" id="split-input">
+                              </div>
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text" style="font-size: 14px;" id="amount">Total
+                                       Amount</span>
+                                 </div>
+                                 <input type="number" onkeyup="calc(this)" class="form-control" placeholder="Ex. 100"
+                                    id="amount-input">
+                              </div>
+
+                              <div class="input-group">
+
+                                 <div id="myStop" class="justify-left col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <input type="radio" id="stop_limit" name="type">
+                                    <label for="stop_limit">Stop Limit</label>
+
+                                 </div>
+                                 <!-- <div id="myStopInput" class="justify-right col-lg-4 col-md-4 col-sm-4 col-xs-8"> -->
+                                 <input type="number" onkeyup="calc(this)" class="form-control" placeholder="Ex. 100"
+                                    id="stop-input"><br>
+                                 <!-- </div> -->
+                                 <br>
+                                 <input type="radio" id="reduce_only" name="type">
+                                 <label for="reduce_only">Reduce Only</label><br>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                           <div class="console_group">
+                              <div class="bot_console_box">
+                                 <table class="table">
+                                    <h5>Trade Info</h5>
+                                    Split <b> Total Amount </b> into <b> n limit orders </b> equally spaced between the
+                                    <b> High Price </b> and the <b> Low Price </b>
+                                    </b> <br><br>
+                                    <i>Warning: Limit orders may execute at market. Define the price bracket
+                                       accordingly.</i>
+                                    <tr>
+                                       <td>Exchange:</td>
+                                       <td>
+                                          <span id="exch_split">
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Asset:</td>
+                                       <td>
+                                          <span id="asset_split">
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Last Price:</td>
+                                       <td>
+                                          <span id="price_split">
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Total Amount:</td>
+                                       <td>
+                                          <span id="total_split">
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Each Order:</td>
+                                       <td>
+                                          <span id="order_split">
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                           <br>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class='order-group'>
+                  <p class='status' id='status-bar-split'></p>
+                  <div class="row m-0 justify-content-between text-center">
+                     <button id='long-split' onclick="buySplit()" class="btn btn-success">Split Buy Orders</button>
+                     <button id='short-split' onclick="sellSplit()" class="btn btn-danger">Split Sell Orders</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <nav class="lownavbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+            <a class="navbar-brand" href="#home"></a>
+         </nav>
+      </div>
+   </section>
+   <script src="plugins/jquery/jquery.js"></script>
+   <script src="plugins/velocity/velocity.js"></script>
+   <script src="plugins/velocity/velocity.ui.js"></script>
+   <script src="plugins/bootstrap/js/bootstrap.js"></script>
+   <script src="plugins/chosen/chosen.jquery.js"></script>
+   <script src="plugins/slider/js/bootstrap-slider.js"></script>
+   <script src="plugins/filestyle/bootstrap-filestyle.js"></script>
+   <script src="plugins/animo/animo.js"></script>
+   <script src="plugins/sparklines/jquery.sparkline.js"></script>
+   <script src="plugins/slimscroll/jquery.slimscroll.js"></script>
+   <script src="plugins/datatable/media/js/jquery.dataTables.js"></script>
+   <script src="plugins/datatable/extensions/datatable-bootstrap/js/dataTables.bootstrap.js"></script>
+   <script src="plugins/datatable/extensions/datatable-bootstrap/js/dataTables.bootstrapPagination.js"></script>
+   <script src="plugins/datatable/extensions/ColVis/js/dataTables.colVis.js"></script>
+   <script src="tradify/highcharts.js"></script>
+   <script src="tradify/exporting.js"></script>
+   <script src="plugins/datatable/extensions/ColVis/js/dataTables.colVis.js"></script>
+   <script src="app/js/tradify.js"></script>
+   <script src="./index.js"></script>
+
+</body>
+
+</html>
