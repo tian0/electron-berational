@@ -3,7 +3,11 @@
 
 A trade risk management app made with Electron.
 
-![](/renderer/images/berational.png)
+![Dashboard](/renderer/images/berational.png)
+
+![Select Exchange](/renderer/images/berational-exch.png)
+
+![Select Asset](/renderer/images/berational-asset.png)
 
 In the project directory, you can run:
 
