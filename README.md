@@ -17,12 +17,13 @@ With Metamask installed and connected to Rinkeby, you are able to join the exist
 
 The dashboard should allow you to see open trades (wip)
 
-The trade setups managed are:
+The trade setups managed by the app are:
 
-Bracket
-Splitter
-LOL (TRI's 'Little Old Lady')
-The BoT (TRI) 
+1. Bracket
+2. Splitter
+3. LOL (TRI's 'Little Old Lady')
+4. The BoT (TRI) 
+
 
 ![Dashboard](/renderer/images/berational.png "Dashboard")
 
