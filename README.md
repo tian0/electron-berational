@@ -1,7 +1,9 @@
 
 # Electron Be Rational
 
-A trade risk management app made with Electron to enforce TRI risk management techniques.
+A trade risk management app made with Electron to enforce [TRI](https://www.therationalinvestor.com) techniques and best practices.
+
+## To Run App Locally
 
 In the project directory, you can run:
 
@@ -9,20 +11,20 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.
-
 The page will reload when you make changes.
 You may also see any lint errors in the console.
 
-With Metamask installed and connected to Rinkeby, you are able to join the existing Membership contract provided here
+## App Features
 
 The dashboard should allow you to see open trades (wip)
 
-The trade setups managed are:
+The trade setups managed by the app are:
 
-Bracket
-Splitter
-LOL (TRI's 'Little Old Lady')
-The BoT (TRI) 
+1. Bracket
+2. Splitter
+3. LOL (TRI's 'Little Old Lady')
+4. The BoT (TRI) 
+
 
 ![Dashboard](/renderer/images/berational.png "Dashboard")
 
