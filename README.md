@@ -3,7 +3,7 @@
 
 A trade risk management app made with Electron.
 
-[](renderer/images/berational.png)
+![](/renderer/images/berational.png)
 
 In the project directory, you can run:
 
