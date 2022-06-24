@@ -3,17 +3,18 @@
 
 A trade risk management app made with Electron to enforce TRI risk management techniques.
 
+## To Run App Locally
+
 In the project directory, you can run:
 
 ### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.
-
 The page will reload when you make changes.
 You may also see any lint errors in the console.
 
-With Metamask installed and connected to Rinkeby, you are able to join the existing Membership contract provided here
+## App Features
 
 The dashboard should allow you to see open trades (wip)
 
