@@ -1,7 +1,7 @@
 
 # Electron Be Rational
 
-A trade risk management app made with Electron to enforce [TRI](https://www.therationalinvestor.com) techniques and best practices.
+A trade risk management app made with Electron to reinforce [TRI](https://www.therationalinvestor.com) techniques and best practices.
 
 ## To Run App Locally
 
